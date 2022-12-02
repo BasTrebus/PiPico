@@ -5,4 +5,4 @@ pin = Pin("LED", Pin.OUT)
 
 while True:
     pin.toggle()
-    sleep(1)
+    sleep(1)  # type: ignore
