@@ -1,0 +1,15 @@
+from machine import Pin, I2C
+from ssd1306 import SSD1306_I2C #type:ignore
+import time
+
+i2c = I2C(0, sda = Pin(0), scl = Pin(1), freq=400000)
+
+time.sleep(1)
+
+display = SSD1306_I2C(128, 32, i2c)
+
+display.text("Line 1", 0, 0)
+display.text("Line 2", 50,12)
+display.text("Line 3", 0, 24)
+
+display.show()
